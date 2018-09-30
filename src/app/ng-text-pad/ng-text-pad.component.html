@@ -1,0 +1,8 @@
+<ng-container>
+  <ng-template #textPadTemplate>
+      <input type="text" placeholder="Enter text" (input)="onChangeText($event)">
+  </ng-template>
+  <ng-template [ngTemplateOutlet]="optionalTemplate || textPadTemplate" [ngTemplateOutletContext]="{ searchTerm: filterValue  }">
+
+  </ng-template>
+</ng-container>
